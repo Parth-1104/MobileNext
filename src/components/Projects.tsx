@@ -39,7 +39,7 @@ const Projects: React.FC = () => {
         <div className="text-center mb-24">
           <span className="block mb-3 text-blue-400 font-medium tracking-wider">SHOWCASING INNOVATION</span>
           <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 mb-8 animate-shimmer">Featured Projects</h2>
-          <p className="text-white/70 max-w-2xl mx-auto text-lg">Innovative mobile solutions showcased at the conference, designed with cutting-edge technology</p>
+          <p className="from-neutral-900 max-w-2xl mx-auto text-lg">Innovative mobile solutions showcased at the conference, designed with cutting-edge technology</p>
         </div>
 
         <div className="space-y-24">
@@ -99,7 +99,7 @@ const Projects: React.FC = () => {
                     className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white rounded-xl transition-all duration-300 shadow-md shadow-pink-500/20 hover:shadow-lg hover:shadow-pink-500/30 group"
                   >
                     <Globe size={20} className="group-hover:animate-float" />
-                    <span className="font-medium">Live Demo</span>
+                    <span className="font-medium">Github</span>
                   </a>
                 </div>
               </div>

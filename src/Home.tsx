@@ -5,6 +5,7 @@ import About from './components/About';
 import Speakers from './components/Speakers';
 import ContactForm from './components/ContactForm';
 import EventTimeline from './components/EventTimeline';
+import TeamPage from './components/Team';
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
         </section>
       
         <section id="speakers">  <Speakers /></section>
+        
       
         {/* <ContactForm /> */}
         

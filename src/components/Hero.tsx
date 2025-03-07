@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Button';
+import { Calendar, MapPin, Clock } from 'lucide-react';
 
 const Herowithimage: React.FC = () => {
   return (
@@ -16,24 +17,36 @@ const Herowithimage: React.FC = () => {
           <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 drop-shadow-xl mb-6 animate-pulse">
             Mobile Dev Conference 2025
           </h1>
+          <div className="flex items-center mb-8 bg-white/80 backdrop-blur-sm p-4 rounded-lg shadow-lg border-l-4 border-blue-500">
+            
+            <div>
+              <div className="text-xl font-bold text-gray-900">March 19, 2025</div>
+              <div className="flex items-center text-sm text-gray-600 mt-1">
+                
+              
+              </div>
+              <div className="flex items-center text-sm text-gray-600 mt-1">
+                <MapPin size={16} className="mr-1" />
+                <span>Bennett University</span>
+              </div>
+            </div>
+          </div>
           <p className="text-xl text-gray-700 mb-8 max-w-xl drop-shadow-lg">
             Join the world's leading mobile developers and innovators for three days
             of learning, networking, and inspiration.
           </p>
           <div className='flex items-center align-middle'>
-          <button className="relative group bg-gradient-to-r from-blue-500 to-blue-300 text-white font-bold py-4 px-10 rounded-xl overflow-hidden transition-all duration-300 hover:scale-110 shadow-xl">
-            <span className="relative z-10">Register Now</span>
-          </button>
-          {/* <button className="relative group bg-gradient-to-r ml-4 from-blue-500 to-blue-300 text-white font-bold py-4 px-10 rounded-xl overflow-hidden transition-all duration-300 hover:scale-110 shadow-xl">
-            <span className="relative z-10">Brochure</span>
-          </button> */}
-          <div className='ml-6 mt-3'>
-          <Button /></div>
+            <button className="relative group bg-gradient-to-r from-blue-500 to-blue-300 text-white font-bold py-4 px-10 rounded-xl overflow-hidden transition-all duration-300 hover:scale-110 shadow-xl">
+              <span className="relative z-10">Register Now</span>
+            </button>
+            <div className='ml-6 mt-3'>
+              <Button />
+            </div>
           </div>
         </div>
 
         {/* Right side phone animation */}
-        <div className="md:w-1/2 flex justify-center perspective-1000 ">
+        <div className="md:w-1/2 flex justify-center perspective-1000 pb-8 md:pb-0">
           <div className="relative w-80 h-[600px] rotate-3d">
             {/* Phone Frame */}
             <div className="absolute inset-0 border-[12px] pb-6 border-black rounded-[3rem] bg-black phone-shadow transition-all duration-500">
@@ -42,15 +55,15 @@ const Herowithimage: React.FC = () => {
 
               {/* Video filling the screen */}
               <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden">
-              <iframe
-            className="w-full h-[calc(100%+120px)] -mt-[60px] pointer-events-none"
-            src="https://www.youtube.com/embed/mhK0i-lkRHo?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&disablekb=1&fs=0&playsinline=1&enablejsapi=0&loop=1&playlist=mhK0i-lkRHo&origin=http://localhost:5173"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            title="Mobile Dev Conference Video"
-            loading="lazy"
-          />
-</div>
+                <iframe
+                  className="w-full h-[calc(100%+120px)] -mt-[60px] pointer-events-none"
+                  src="https://www.youtube.com/embed/mhK0i-lkRHo?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&disablekb=1&fs=0&playsinline=1&enablejsapi=0&loop=1&playlist=mhK0i-lkRHo&origin=http://localhost:5173"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  title="Mobile Dev Conference Video"
+                  loading="lazy"
+                />
+              </div>
 
               {/* Side Buttons (Volume & Power) */}
               <div className="absolute -left-[14px] top-24 w-[2px] h-16 bg-gray-400 rounded-l-lg"></div>

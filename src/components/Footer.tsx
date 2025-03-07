@@ -1,118 +1,92 @@
-import React from 'react';
-import { FaTwitter, FaFacebook, FaLinkedin, FaInstagram } from 'react-icons/fa';
-
-interface FooterLink {
-  title: string;
-  links: {
-    name: string;
-    href: string;
-  }[];
-}
+import React from "react";
+import { FaTwitter, FaFacebook, FaLinkedin, FaInstagram, FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const Footer: React.FC = () => {
-  const footerLinks: FooterLink[] = [
-    {
-      title: 'Products',
-      links: [
-        { name: 'Features', href: '#' },
-        { name: 'Pricing', href: '#' },
-        { name: 'Solutions', href: '#' },
-        { name: 'Documentation', href: '#' },
-      ],
-    },
-    {
-      title: 'Company',
-      links: [
-        { name: 'About us', href: '#' },
-        { name: 'Careers', href: '#' },
-        { name: 'Press', href: '#' },
-        { name: 'News', href: '#' },
-      ],
-    },
-    {
-      title: 'Resources',
-      links: [
-        { name: 'Blog', href: '#' },
-        { name: 'Events', href: '#' },
-        { name: 'Help center', href: '#' },
-        { name: 'Tutorials', href: '#' },
-      ],
-    },
-    {
-      title: 'Legal',
-      links: [
-        { name: 'Terms', href: '#' },
-        { name: 'Privacy', href: '#' },
-        { name: 'Cookies', href: '#' },
-        { name: 'Licenses', href: '#' },
-      ],
-    },
-  ];
-
   return (
-    <footer className="w-full bg-gradient-to-t from-black to-gray-900 text-gray-200 overflow-hidden">
+    <footer className="w-full bg-gradient-to-t from-black to-gray-900 text-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Company info */}
-          <div className="col-span-1 lg:col-span-1">
-            <div className="flex flex-col space-y-4">
-              <h2 className="text-xl font-bold text-white">Company Name</h2>
-              <p className="text-sm text-gray-400 max-w-xs">
-                Creating innovative solutions for businesses worldwide since 2010.
-              </p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  <FaTwitter size={20} />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  <FaFacebook size={20} />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  <FaLinkedin size={20} />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  <FaInstagram size={20} />
-                </a>
-              </div>
-            </div>
+        {/* Desktop View */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Company Info */}
+          <div className="col-span-1">
+            <h2 className="text-xl font-bold text-white">Bennett University</h2>
+            <p className="text-sm text-gray-400 max-w-xs">
+              Preparing India to move with Times.
+            </p>
+            {/* <div className="flex space-x-4 mt-3">
+              <FaTwitter size={20} />
+              <FaFacebook size={20} />
+              <FaLinkedin size={20} />
+              <FaInstagram size={20} />
+            </div> */}
           </div>
 
-          {/* Links */}
-          {footerLinks.map((section) => (
-            <div key={section.title} className="col-span-1">
-              <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">
-                {section.title}
-              </h3>
-              <ul className="space-y-2">
-                {section.links.map((link) => (
-                  <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="text-gray-400 hover:text-white text-sm transition-colors"
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Contact Details */}
+          <div className="col-span-1">
+            <h3 className="text-sm font-semibold text-white uppercase mb-4">Contact Us</h3>
+            <ul className="space-y-3 text-gray-400 text-sm">
+              <li className="flex items-center space-x-2">
+                <FaMapMarkerAlt />
+                <span>Plot Nos 8-11, TechZone II, Greater Noida 201310, UP. India.</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <FaPhone />
+                <span>Toll Free : 1800-103-8484</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <FaEnvelope />
+                <span>Email: info@bennett.edu.in</span>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white">General Query Form</a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Google Map */}
+          <div className="col-span-1">
+            <h3 className="text-sm font-semibold text-white uppercase mb-4">Our Location</h3>
+            <iframe
+              className="w-full h-48 rounded-lg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3516.9044627776055!2d77.5820091!3d28.4506465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cbf94deb6bc39%3A0x7ba6bedc9a2b537f!2sBennett%20University%20(Times%20of%20India%20Group)!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              allowFullScreen
+              loading="lazy"
+            ></iframe>
+          </div>
         </div>
 
-        <div className="mt-12 border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-gray-400">
-              &copy; {new Date().getFullYear()} Company Name. All rights reserved.
-            </p>
-            <div className="mt-4 md:mt-0">
-              <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors mr-4">
-                Terms of Service
-              </a>
-              <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
-                Privacy Policy
-              </a>
-            </div>
+        {/* Mobile View */}
+        <div className="md:hidden text-center">
+          <h2 className="text-lg font-bold text-white">Company Name</h2>
+          <p className="text-sm text-gray-400 mt-1">Innovative solutions since 2010.</p>
+          {/* <div className="flex justify-center space-x-4 mt-3">
+            <FaTwitter size={20} />
+            <FaFacebook size={20} />
+            <FaLinkedin size={20} />
+            <FaInstagram size={20} />
+          </div> */}
+
+          <div className="mt-6 space-y-3 text-sm text-gray-400">
+            <p><FaMapMarkerAlt className="inline mr-2" /> 123, Business Street, New Delhi, India</p>
+            <p><FaPhone className="inline mr-2" /> Toll-Free: 1800-123-4567</p>
+            <p><FaEnvelope className="inline mr-2" /> Email: contact@company.com</p>
+            <a href="#" className="block hover:text-white">General Query Form</a>
           </div>
+
+          {/* Google Map */}
+          <div className="mt-6">
+            <iframe
+              className="w-full h-38 rounded-lg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3516.9044627776055!2d77.5820091!3d28.4506465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cbf94deb6bc39%3A0x7ba6bedc9a2b537f!2sBennett%20University%20(Times%20of%20India%20Group)!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              allowFullScreen
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+
+        {/* Footer Bottom */}
+        <div className="mt-8 border-t border-gray-800 pt-4 text-center text-sm">
+          &copy; {new Date().getFullYear()} Bennett University. All rights reserved.
         </div>
       </div>
     </footer>

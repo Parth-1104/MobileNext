@@ -61,6 +61,9 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
               <Link to="/projects" className="relative text-black/90 hover:text-black transition-colors duration-200 py-2 group">
                 Projects
               </Link>
+              <Link to="/team" className="relative text-black/90 hover:text-black transition-colors duration-200 py-2 group">
+                Team
+              </Link>
               <HashLink to="/#timeline" className="relative text-black/90 hover:text-black transition-colors duration-200 py-2 group">
                 Timeline
               </HashLink>
@@ -95,6 +98,12 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
               <Link to="/projects" onClick={() => setIsMenuOpen(false)} className="block py-2 text-black/90 hover:text-black transition-all duration-200 hover:translate-x-2">
                 Projects
               </Link>
+              <Link to="/team" onClick={() => setIsMenuOpen(false)} className="block py-2 text-black/90 hover:text-black transition-all duration-200 hover:translate-x-2">
+                Team
+              </Link>
+              <HashLink to="/#timeline" onClick={() => setIsMenuOpen(false)} className="block py-2 text-black/90 hover:text-black transition-all duration-200 hover:translate-x-2">
+                Timeline
+              </HashLink>
               {/* Add other links as needed */}
             </div>
           </div>

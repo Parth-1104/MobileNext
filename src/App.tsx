@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './Home';
 import ProjectPage from './projectpage';
 import Footer from './components/Footer';
+import TeamPage from './components/Team';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<ProjectPage />} />
+          <Route path="/team" element={<TeamPage />} />
 
         </Routes>
         <Footer/>
