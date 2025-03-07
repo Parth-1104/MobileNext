@@ -6,61 +6,61 @@ const EventTimeline = () => {
   const [direction, setDirection] = useState("right");
 
   const programs = [
-    {
-      id: 0,
-      time: "09:00 - 10:00",
-      title: "Lamp Lighting",
-      location: "Main Entrance",
-      description:
-        "Traditional lamp lighting ceremony to inaugurate the event with distinguished guests.",
-      icon: "🪔",
-    },
-    {
-      id: 1,
-      time: "10:30 - 11:30",
-      title: "Opening Ceremony",
-      location: "Main Hall",
-      description:
-        "Official welcome address and introduction to the event theme and schedule.",
-      icon: "🎪",
-    },
-    {
-      id: 2,
-      time: "12:00 - 13:30",
-      title: "Facilitating of Guests",
-      location: "Auditorium",
-      description:
-        "Special interactive session with esteemed guests and networking opportunities.",
-      icon: "👥", // Swapped 🎙️ -> 👥
-    },
-    {
-      id: 3,
-      time: "14:00 - 15:30",
-      title: "Speaker Session",
-      location: "Conference Lounge",
-      description:
-        "Keynote presentations from industry experts sharing insights and knowledge.",
-      icon: "🎙️", // Swapped 👥 -> 🎙️
-    },
-    {
-      id: 4,
-      time: "16:00 - 17:30",
-      title: "App Showcase",
-      location: "Exhibition Hall",
-      description:
-        "Demonstration of innovative projects and ideas developed by participants.",
-      icon: "🏆",
-    },
-    {
-      id: 5,
-      time: "19:00 - 21:00",
-      title: "Movie Night",
-      location: "Open-Air Theater",
-      description: "Concluding the day with a special film screening under the stars.",
-      icon: "🎬",
-    },
-  ];
-  
+  {
+    id: 0,
+    time: "09:00 - 10:00",
+    title: "Lamp Lighting",
+    location: "Main Entrance",
+    description:
+      "Traditional lamp lighting ceremony to inaugurate the event with distinguished guests.",
+    icon: "🪔",
+  },
+  {
+    id: 1,
+    time: "10:30 - 11:30",
+    title: "Opening Ceremony",
+    location: "Main Hall",
+    description:
+      "Official welcome address and introduction to the event theme and schedule.",
+    icon: "🎪",
+  },
+  {
+    id: 2,
+    time: "12:00 - 13:30",
+    title: "Facilitating of Guests",
+    location: "Auditorium",
+    description:
+      "Special interactive session with esteemed guests and networking opportunities.",
+    icon: "👥", // Swapped 🎙️ -> 👥
+  },
+  {
+    id: 3,
+    time: "14:00 - 15:30",
+    title: "Speaker Session",
+    location: "Conference Lounge",
+    description:
+      "Keynote presentations from industry experts sharing insights and knowledge.",
+    icon: "🎙️", // Swapped 👥 -> 🎙️
+  },
+  {
+    id: 4,
+    time: "16:00 - 17:30",
+    title: "App Showcase",
+    location: "Exhibition Hall",
+    description:
+      "Demonstration of innovative projects and ideas developed by participants.",
+    icon: "🏆",
+  },
+  {
+    id: 5,
+    time: "19:00 - 21:00",
+    title: "Movie Night",
+    location: "Open-Air Theater",
+    description: "Concluding the day with a special film screening under the stars.",
+    icon: "🎬",
+  },
+];
+
 
   const handleProgramChange = (newIndex) => {
     if (newIndex >= 0 && newIndex < programs.length) {

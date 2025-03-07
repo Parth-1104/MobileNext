@@ -40,6 +40,19 @@ const Footer: React.FC = () => {
               <li>
                 <a href="#" className="hover:text-white">General Query Form</a>
               </li>
+              <li>
+              <p className="text-gray-400">
+              <span>Developed by </span>
+              <a 
+                href="https://www.linkedin.com/in/parth-singh427/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Parth <FaLinkedin className="inline ml-1 mb-1" size={14} />
+              </a>
+            </p>
+            </li>
             </ul>
           </div>
 
@@ -57,8 +70,8 @@ const Footer: React.FC = () => {
 
         {/* Mobile View */}
         <div className="md:hidden text-center">
-          <h2 className="text-lg font-bold text-white">Company Name</h2>
-          <p className="text-sm text-gray-400 mt-1">Innovative solutions since 2010.</p>
+          <h2 className="text-lg font-bold text-white">Bennett University</h2>
+          <p className="text-sm text-gray-400 mt-1">Preparing India to move with Times.</p>
           {/* <div className="flex justify-center space-x-4 mt-3">
             <FaTwitter size={20} />
             <FaFacebook size={20} />
@@ -67,10 +80,21 @@ const Footer: React.FC = () => {
           </div> */}
 
           <div className="mt-6 space-y-3 text-sm text-gray-400">
-            <p><FaMapMarkerAlt className="inline mr-2" /> 123, Business Street, New Delhi, India</p>
-            <p><FaPhone className="inline mr-2" /> Toll-Free: 1800-123-4567</p>
-            <p><FaEnvelope className="inline mr-2" /> Email: contact@company.com</p>
+            <p><FaMapMarkerAlt className="inline mr-2" /> Plot Nos 8-11, TechZone II, Greater Noida 201310, UP. India.</p>
+            <p><FaPhone className="inline mr-2" /> Toll Free : 1800-103-8484</p>
+            <p><FaEnvelope className="inline mr-2" /> Email: info@bennett.edu.in</p>
             <a href="#" className="block hover:text-white">General Query Form</a>
+            <p className="text-gray-400">
+              <span>Developed by </span>
+              <a 
+                href="https://www.linkedin.com/in/parth-singh427/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Parth <FaLinkedin className="inline ml-1 mb-1" size={14} />
+              </a>
+            </p>
           </div>
 
           {/* Google Map */}
@@ -86,7 +110,10 @@ const Footer: React.FC = () => {
 
         {/* Footer Bottom */}
         <div className="mt-8 border-t border-gray-800 pt-4 text-center text-sm">
-          &copy; {new Date().getFullYear()} Bennett University. All rights reserved.
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-4">
+            <p>&copy; {new Date().getFullYear()} Bennett University. All rights reserved.</p>
+            
+          </div>
         </div>
       </div>
     </footer>
