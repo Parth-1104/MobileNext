@@ -15,8 +15,8 @@ const About: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3
+        staggerChildren: 0.1,
+        delayChildren: 0.1
       }
     }
   };
@@ -43,14 +43,14 @@ const About: React.FC = () => {
         stiffness: 100
       }
     },
-    hover: {
-      scale: 1.05,
-      transition: {
-        type: "spring",
-        stiffness: 400,
-        damping: 10
-      }
-    }
+    // hover: {
+    //   scale: 1.05,
+    //   transition: {
+    //     type: "spring",
+    //     stiffness: 400,
+    //     damping: 10
+    //   }
+    // }
   };
 
   return (
@@ -78,20 +78,31 @@ const About: React.FC = () => {
               variants={containerVariants}
             >
               <motion.p variants={itemVariants}>
-                Since its inception in 2015, MobileDevConf has been at the forefront
-                of mobile development innovation, bringing together the brightest
-                minds and most influential leaders in the industry.
+              Mobile Next is an international conference dedicated
+to the latest advancements and innovations in
+mobile technology. Organized by Bennett University
+and Mobilon, this one-day event brings together
+industry experts, developers, and researchers for
+insightful discussions and interactive sessions.
               </motion.p>
               <motion.p variants={itemVariants}>
-                What started as a small gathering of passionate developers has
-                evolved into one of the most prestigious mobile development
-                conferences globally, attracting thousands of attendees from over
-                40 countries annually.
+              With a focus on emerging frameworks, AI integration,
+and next-gen connectivity, Mobile Next serves as a
+platform to exchange ideas, showcase
+groundbreaking work, and shape the future of mobile
+technology.
               </motion.p>
               <motion.p variants={itemVariants}>
-                Our mission remains unchanged: to foster innovation, facilitate
-                knowledge sharing, and build a vibrant community of mobile
-                developers who are shaping the future of digital experiences.
+              An exclusive conference featuring industry
+experts sharing insights on iOS and mobile
+app development. Explore the latest trends,
+technologies, and best practices in app
+creation from seasoned professionals. Gain
+valuable knowledge about the evolving app
+development landscape and career
+opportunities in the field. Engage in
+discussions, ask questions, and expand your
+understanding of this dynamic industry.
               </motion.p>
             </motion.div>
 

@@ -1,0 +1,28 @@
+import React from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Speakers from './components/Speakers';
+import ContactForm from './components/ContactForm';
+import EventTimeline from './components/EventTimeline';
+
+function Home() {
+  return (
+    <div className="min-h-screen w-full  overflow-x-hidden">
+      <section id='home'>
+        <Hero />
+        </section>
+        <section id="about">
+        <About />
+        </section>
+      
+        <section id="speakers">  <Speakers /></section>
+      
+        {/* <ContactForm /> */}
+        
+        <section id="timeline"> <EventTimeline/></section>
+    </div>
+  );
+}
+
+export default Home;

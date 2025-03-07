@@ -8,3 +8,9 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
 });
+
+
+// interface NavbarProps {
+//   isMenuOpen: boolean;
+//   setIsMenuOpen: (isOpen: boolean) => void;
+// }

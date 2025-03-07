@@ -3,30 +3,30 @@ import { motion } from 'framer-motion';
 import { Star, ArrowRight } from 'lucide-react';
 
 const speakers = [
-  {
-    name: 'Sarah Johnson',
-    role: 'Lead Mobile Developer at Tech Giants',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200&h=200',
-    topic: 'Future of Cross-Platform Development',
-  },
+  // {
+  //   name: 'Sarah Johnson',
+  //   role: 'Lead Mobile Developer at Tech Giants',
+  //   image: 'src/assets/Mukesh Bansal.jpg',
+  //   topic: 'Future of Cross-Platform Development',
+  // },
   {
     name: 'Michael Chen',
     role: 'Flutter Developer Advocate',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200&h=200',
+    image: 'src/assets/SunilBhatnagar.jpg',
     topic: 'Building Beautiful UIs with Flutter',
   },
   {
     name: 'Emily Rodriguez',
     role: 'Mobile Security Expert',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=200&h=200',
+    image: 'src/assets/Mukesh Bansal.jpg',
     topic: 'Security Best Practices in Mobile Apps',
   },
-  {
-    name: 'David Kim',
-    role: 'React Native Core Contributor',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200&h=200',
-    topic: 'Advanced React Native Architecture',
-  },
+  // {
+  //   name: 'David Kim',
+  //   role: 'React Native Core Contributor',
+  //   image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200&h=200',
+  //   topic: 'Advanced React Native Architecture',
+  // },
 ];
 
 const Speakers: React.FC = () => {
@@ -85,7 +85,7 @@ const Speakers: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-indigo-50 via-sky-50 to-blue-50 overflow-hidden">
+    <section id='speakers' className="py-20 bg-gradient-to-b from-indigo-50 via-sky-50 to-blue-50 overflow-hidden">
       <motion.div 
         className="container mx-auto px-4"
         initial="hidden"
@@ -103,9 +103,9 @@ const Speakers: React.FC = () => {
         </motion.div>
         
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-          variants={containerVariants}
-        >
+  className=" grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-2  justify-center place-items-center"
+  variants={containerVariants}
+>
           {speakers.map((speaker, index) => (
             <motion.div
               key={speaker.name}
