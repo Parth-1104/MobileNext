@@ -106,32 +106,7 @@ understanding of this dynamic industry.
               </motion.p>
             </motion.div>
 
-            <motion.div 
-              className="grid grid-cols-2 gap-6 mt-12"
-              variants={containerVariants}
-            >
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  className="bg-gradient-to-br from-white/95 via-white/90 to-transparent backdrop-blur-sm rounded-lg p-6 text-center shadow-lg border border-sky-100 relative overflow-hidden group"
-                  variants={statCardVariants}
-                  whileHover="hover"
-                  custom={index}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-sky-500/10 to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <motion.div
-                    initial={{ scale: 0.5, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ delay: 0.2 * index }}
-                    className="relative z-10"
-                  >
-                    <stat.icon className="w-8 h-8 mx-auto mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-600" />
-                    <div className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-700 to-indigo-700 mb-1">{stat.value}</div>
-                    <div className="text-sm text-slate-600">{stat.label}</div>
-                  </motion.div>
-                </motion.div>
-              ))}
-            </motion.div>
+            
           </motion.div>
 
           <motion.div 
@@ -164,9 +139,9 @@ understanding of this dynamic industry.
                   <p className="text-white font-semibold">
                     "Bringing together the world's most innovative mobile developers"
                   </p>
-                  <p className="text-blue-200 text-sm mt-1">
+                  {/* <p className="text-blue-200 text-sm mt-1">
                     - Sarah Chen, Conference Founder
-                  </p>
+                  </p> */}
                 </div>
               </motion.div>
             </motion.div>
