@@ -163,7 +163,7 @@ const TeamPage: React.FC = () => {
         </motion.h2>
 
         {/* Leadership Cards */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-row-3 gap-6">
           {leadership.map((leader, index) => (
             <motion.div
               key={index}
