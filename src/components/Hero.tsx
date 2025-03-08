@@ -61,11 +61,12 @@ const Herowithimage: React.FC = () => {
           </p>
           <div className='flex items-center align-middle'>
           <button 
-      onClick={handleClick}
-      className="relative group bg-gradient-to-r from-blue-500 to-blue-300 text-white font-bold py-4 px-10 rounded-xl overflow-hidden transition-all duration-300 hover:scale-110 shadow-xl"
-    >
-      <span className="relative z-10">Register Now</span>
-    </button>
+  onClick={handleClick}
+  className="relative group bg-gradient-to-r from-blue-500 to-blue-300 text-white font-bold py-4 px-10 rounded-xl overflow-hidden transition-all duration-300 hover:scale-110 shadow-xl 
+  md:py-4 md:px-10 md:text-lg text-sm px-6 py-3"
+>
+  <span className="relative z-10">Register Now</span>
+</button>
             <div className='ml-6 mt-3'>
               <Button />
             </div>
