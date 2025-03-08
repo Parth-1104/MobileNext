@@ -6,7 +6,7 @@ import { assets } from '../assets/assets_frontend/assets';
 const speakers = [
   {
     name: 'Sunil Bhatnagar',
-    role: 'Flutter Developer Advocate',
+    role: ' CXO-Lithium Project',
     image: assets.photo1,
     topic: 'Building Beautiful UIs with Flutter',
   },
