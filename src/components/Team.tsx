@@ -40,11 +40,11 @@ const TeamPage: React.FC = () => {
     {
       title: "Organizing Secretaries",
       members: [
-        { name: "Dr. Deepika Pantola", position: "Organization Secretary", linkedinId: "deepika-pantola" },
-        { name: "Dr. Anuj Bharti", position: "Organization Secretary", linkedinId: "anuj-bharti" },
-        { name: "Dr. Madhuri Gupta", position: "Organization Secretary", linkedinId: "madhuri-gupta" },
-        { name: "Dr. Deepika Vatsa", position: "Organization Secretary", linkedinId: "deepika-vatsa" },
-        { name: "Dr. Mohd. Abuzar Sayeed", position: "Organization Secretary", linkedinId: "abuzar-sayeed" },
+        { name: "Dr. Deepika Pantola", position: "Organizing Secretary", linkedinId: "deepika-pantola" },
+        { name: "Dr. Anuj Bharti", position: "Organizing Secretary", linkedinId: "anuj-bharti" },
+        { name: "Dr. Madhuri Gupta", position: "Organizing Secretary", linkedinId: "madhuri-gupta" },
+        { name: "Dr. Deepika Vatsa", position: "Organizing Secretary", linkedinId: "deepika-vatsa" },
+        { name: "Dr. Mohd. Abuzar Sayeed", position: "Organizing Secretary", linkedinId: "abuzar-sayeed" },
       ],
     },
     {
