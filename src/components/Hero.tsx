@@ -1,6 +1,8 @@
 import React from 'react';
 import Button from './Button';
 import { Calendar, MapPin, Clock } from 'lucide-react';
+import { assets } from '../assets/assets_frontend/assets';
+
 
 const Herowithimage: React.FC = () => {
   return (

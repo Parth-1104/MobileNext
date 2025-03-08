@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { assets } from '../assets/assets_frontend/assets';
+
 
 const Button = () => {
   const handleDownload = () => {
-    const pdfUrl = 'src/assets/Mobile next Poster and brochure.pdf.pdf'; // Adjust path if needed
+    const pdfUrl = assets.pdf; // Adjust path if needed
     const link = document.createElement('a');
     link.href = pdfUrl;
     link.download = 'brochure.pdf'; // Suggested download filename

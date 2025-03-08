@@ -92,7 +92,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
               <HashLink to="/#about" onClick={() => setIsMenuOpen(false)} className="block py-2 text-black/90 hover:text-black transition-all duration-200 hover:translate-x-2">
                 About
               </HashLink>
-              <HashLink to="/#speaker" onClick={() => setIsMenuOpen(false)} className="block py-2 text-black/90 hover:text-black transition-all duration-200 hover:translate-x-2">
+              <HashLink to="/#speakers" onClick={() => setIsMenuOpen(false)} className="block py-2 text-black/90 hover:text-black transition-all duration-200 hover:translate-x-2">
                 Speakers
               </HashLink>
               <Link to="/projects" onClick={() => setIsMenuOpen(false)} className="block py-2 text-black/90 hover:text-black transition-all duration-200 hover:translate-x-2">

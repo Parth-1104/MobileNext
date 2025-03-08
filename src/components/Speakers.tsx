@@ -1,18 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, ArrowRight } from 'lucide-react';
+import { assets } from '../assets/assets_frontend/assets';
 
 const speakers = [
   {
     name: 'Sunil Bhatnagar',
     role: 'Flutter Developer Advocate',
-    image: 'src/assets/PHOTO-2025-03-08-00-05-15.jpg',
+    image: assets.photo1,
     topic: 'Building Beautiful UIs with Flutter',
   },
   {
     name: 'Mukesh Bansal',
     role: 'Mobile Security Expert',
-    image: 'src/assets/Mukesh Bansal.jpg',
+    image: assets.photo2,
     topic: 'Security Best Practices in Mobile Apps',
   },
 ];
