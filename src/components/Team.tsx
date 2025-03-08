@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 
 interface TeamMember {
   name: string;
+  position: string;
+  info?: string;
   linkedinId: string;
 }
 
@@ -12,45 +14,67 @@ interface CommitteeSection {
 }
 
 const TeamPage: React.FC = () => {
+  // Leadership structure
+  const leadership: TeamMember[] = [
+    { 
+      name: "Mr. Vineet Jain", 
+      position: "PATRON",
+      info: "MD, The Times Group, Chancellor, Bennett University",
+      linkedinId: "vineet-jain" 
+    },
+    { 
+      name: "Ms. Revati Jain", 
+      position: "PATRON IN CHIEF",
+      info: "Pro Chancellor, Bennett University",
+      linkedinId: "revati-jain" 
+    },
+    { 
+      name: "Prof. (Dr.) Abhay Bansal", 
+      position: "GENERAL CHAIR",
+      info: "Dean, School of Computer Science Engineering and Technology, Bennett University",
+      linkedinId: "abhay-bansal" 
+    }
+  ];
+
   const committees: CommitteeSection[] = [
     {
       title: "Organization Secretaries",
       members: [
-        { name: "Dr. Deepika Pantola", linkedinId: "Dr. Deepika Pantola" },
-        { name: "Dr. Anuj Bharti ", linkedinId: "Dr. Anuj Bharti " },
-        { name: "Dr. Madhuri Gupta", linkedinId: "Dr. Madhuri Gupta" },
-        { name: "Dr. Deepika Vatsa", linkedinId: "Dr. Deepika Vatsa" },
-        { name: "Dr. Mohd. Abuzar Sayeed", linkedinId: "Dr. Mohd. Abuzar Sayeed" },
+        { name: "Dr. Deepika Pantola", position: "Organization Secretary", linkedinId: "deepika-pantola" },
+        { name: "Dr. Anuj Bharti", position: "Organization Secretary", linkedinId: "anuj-bharti" },
+        { name: "Dr. Madhuri Gupta", position: "Organization Secretary", linkedinId: "madhuri-gupta" },
+        { name: "Dr. Deepika Vatsa", position: "Organization Secretary", linkedinId: "deepika-vatsa" },
+        { name: "Dr. Mohd. Abuzar Sayeed", position: "Organization Secretary", linkedinId: "abuzar-sayeed" },
       ],
     },
     {
       title: "Technical Program Committee",
       members: [
-        { name: "Dr. Manish Raj ", linkedinId: "Dr. Manish Raj" },
-        { name: "Dr. Shakti Sharma ", linkedinId: "Dr. Shakti Sharma" },
-        { name: "Dr. Mukund Pratap Singh ", linkedinId: "Dr. Mukund Pratap Singh" },
-        { name: "Dr. Naween Kumar", linkedinId: "emily-brown-123" },
-        { name: "Dr. Anu Rani", linkedinId: "Dr. Anu Rani" },
-        { name: "Dr. Garima Jaiswal ", linkedinId: "Dr. Garima Jaiswal" },
-        { name: "Dr. Gitika Sharma", linkedinId: "Dr. Gitika Sharma" },
-        { name: "Dr. Riti Kushwaha ", linkedinId: "Dr. Riti Kushwaha" },
+        { name: "Dr. Manish Raj", position: "Technical Chair", linkedinId: "manish-raj" },
+        { name: "Dr. Shakti Sharma", position: "Technical Chair", linkedinId: "shakti-sharma" },
+        { name: "Dr. Mukund Pratap Singh", position: "Technical Chair", linkedinId: "mukund-singh" },
+        { name: "Dr. Naween Kumar", position: "Technical Chair", linkedinId: "naween-kumar" },
+        { name: "Dr. Anu Rani", position: "Technical Chair", linkedinId: "anu-rani" },
+        { name: "Dr. Garima Jaiswal", position: "Technical Chair", linkedinId: "garima-jaiswal" },
+        { name: "Dr. Gitika Sharma", position: "Technical Chair", linkedinId: "gitika-sharma" },
+        { name: "Dr. Riti Kushwaha", position: "Technical Chair", linkedinId: "riti-kushwaha" },
       ],
     },
     {
       title: "Local Organizing Committee",
       members: [
-        { name: "Ms. Ankita Sharma ", linkedinId: "Ms. Ankita Sharma" },
-        { name: "Ms. Priyanka Chauhan", linkedinId: "Ms. Priyanka Chauhan" },
-        { name: "Mr. Kundan", linkedinId: "Mr. Kundan" },
+        { name: "Ms. Ankita Sharma", position: "Organizing Member", linkedinId: "ankita-sharma" },
+        { name: "Ms. Priyanka Chauhan", position: "Organizing Member", linkedinId: "priyanka-chauhan" },
+        { name: "Mr. Kundan", position: "Organizing Member", linkedinId: "kundan" },
       ],
     },
     {
       title: "Student Organizing Committee",
       members: [
-        { name: "Rakshit Kapoor", linkedinId: "Rakshit Kapoor" },
-        { name: "Arushi Shah", linkedinId: "Arushi Shah" },
-        { name: "Siya Kakkar", linkedinId: "Siya Kakkar" },
-        { name: "Parth Pankaj Singh", linkedinId: "Parth Pankaj Singh" },
+        { name: "Rakshit Kapoor", position: "Student Coordinator", linkedinId: "rakshit-kapoor" },
+        { name: "Arushi Shah", position: "Student Coordinator", linkedinId: "arushi-shah" },
+        { name: "Siya Kakkar", position: "Student Coordinator", linkedinId: "siya-kakkar" },
+        { name: "Parth Pankaj Singh", position: "Student Coordinator", linkedinId: "parth-singh" },
       ],
     },
   ];
@@ -63,6 +87,7 @@ const TeamPage: React.FC = () => {
   
   // Track which card is being hovered
   const [hoveredCard, setHoveredCard] = useState<{section: number, card: number} | null>(null);
+  const [hoveredLeadership, setHoveredLeadership] = useState<number | null>(null);
 
   // Function to handle scroll buttons
   const scroll = (index: number, direction: 'left' | 'right') => {
@@ -100,7 +125,7 @@ const TeamPage: React.FC = () => {
 
       <motion.h1 
         className="text-4xl font-bold text-center mb-16 relative"
-        initial={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
@@ -115,18 +140,103 @@ const TeamPage: React.FC = () => {
         </span>
       </motion.h1>
 
+      {/* Leadership Section */}
+      <motion.div 
+        className="mb-20 relative"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        <motion.h2 
+          className="text-2xl font-semibold mb-6 pb-2 relative inline-block"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Leadership
+          <motion.div 
+            className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500"
+            initial={{ width: 0 }}
+            animate={{ width: "100%" }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          ></motion.div>
+        </motion.h2>
+
+        {/* Leadership Cards */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {leadership.map((leader, index) => (
+            <motion.div
+              key={index}
+              className="bg-white bg-opacity-90 backdrop-filter backdrop-blur-sm shadow-md rounded-lg p-6 flex flex-col justify-between"
+              style={{ minHeight: '220px' }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ 
+                scale: 1.03, 
+                boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+                backgroundColor: "rgba(255, 255, 255, 1)" 
+              }}
+              onHoverStart={() => setHoveredLeadership(index)}
+              onHoverEnd={() => setHoveredLeadership(null)}
+            >
+              <div>
+                <div className="mb-2">
+                  <span className="text-sm font-semibold bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
+                    {leader.position}
+                  </span>
+                </div>
+                <motion.h3 
+                  className="text-xl font-medium mb-1 text-gray-800 leading-tight" 
+                  whileHover={{ color: "#2563EB" }}
+                >
+                  {leader.name}
+                </motion.h3>
+                {leader.info && (
+                  <p className="text-gray-600 text-sm mb-4">{leader.info}</p>
+                )}
+              </div>
+              <div className="flex items-center mt-auto">
+                <motion.svg
+                  className="w-5 h-5 mr-2 text-blue-600 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  initial={{ rotate: 0 }}
+                  animate={hoveredLeadership === index ? 
+                    { rotate: [0, 10, 0], transition: { duration: 0.5 } } : 
+                    { rotate: 0 }
+                  }
+                >
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </motion.svg>
+                <motion.a
+                  href={`https://linkedin.com/in/${leader.linkedinId}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 break-words text-sm hover:underline"
+                  style={{ wordBreak: "break-all" }}
+                >
+                  {leader.linkedinId}
+                </motion.a>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Committee sections */}
       {committees.map((committee, index) => (
         <motion.div 
           key={index} 
           className="mb-20 relative committee-section"
           data-index={index}
-          initial={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.7, delay: 0.2 + index * 0.1 }}
         >
           <motion.h2 
             className="text-2xl font-semibold mb-6 pb-2 relative inline-block"
-            initial={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
@@ -142,7 +252,7 @@ const TeamPage: React.FC = () => {
           {/* Mobile scroll controls with animations */}
           <motion.div 
             className="md:hidden flex justify-between mb-4"
-            initial={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
@@ -189,11 +299,11 @@ const TeamPage: React.FC = () => {
                 style={{
                   scrollSnapAlign: 'start',
                   minWidth: '280px',
-                  minHeight: '140px'
+                  minHeight: '160px'
                 }}
-                initial={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.5, delay: memberIndex * 0.05 }}
                 whileHover={{ 
                   scale: 1.03, 
                   boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
@@ -202,12 +312,15 @@ const TeamPage: React.FC = () => {
                 onHoverStart={() => setHoveredCard({section: index, card: memberIndex})}
                 onHoverEnd={() => setHoveredCard(null)}
               >
-                <motion.h3 
-                  className="text-xl font-medium mb-3 text-gray-800 leading-tight line-clamp-none" 
-                  whileHover={{ color: "#2563EB" }}
-                >
-                  {member.name}
-                </motion.h3>
+                <div>
+                  <motion.h3 
+                    className="text-xl font-medium mb-1 text-gray-800 leading-tight" 
+                    whileHover={{ color: "#2563EB" }}
+                  >
+                    {member.name}
+                  </motion.h3>
+                  <p className="text-blue-600 text-sm font-medium mb-3">{member.position}</p>
+                </div>
                 <div className="flex items-center mt-auto">
                   <motion.svg
                     className="w-5 h-5 mr-2 text-blue-600 flex-shrink-0"
@@ -235,7 +348,7 @@ const TeamPage: React.FC = () => {
             ))}
           </div>
 
-          {/* Enhanced scroll indicators for mobile */}
+          {/* Scroll indicators for mobile */}
           <div className="flex justify-center mt-4 md:hidden">
             {committee.members.length > 1 && (
               <div className="flex space-x-2">
