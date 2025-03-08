@@ -23,7 +23,7 @@ const MarqueeStyle = () => (
 
 const Herowithimage: React.FC = () => {
     const handleClick = () => {
-      window.open('https://forms.office.com/Pages/ResponsePage.aspx?id=9NpbLPKP2Uu9VHxQqyGVkHbQOaNtO65Kl91UWmgs6LhURUMyTlZPTEpTMEZLQjlEMkNDUTBZWkJSVi4u&origin=QRCode', '_blank');
+      window.open('https://forms.office.com/Pages/ResponsePage.aspx?id=9NpbLPKP2Uu9VHxQqyGVkHbQOaNtO65Kl91UWmgs6LhURUMyTlZPTEpTMEZLQjlEMkNDUTBZWkJSVi4u', '_blank');
     };
   
   return (
