@@ -38,7 +38,7 @@ const TeamPage: React.FC = () => {
 
   const committees: CommitteeSection[] = [
     {
-      title: "Organization Secretaries",
+      title: "Organizing Secretaries",
       members: [
         { name: "Dr. Deepika Pantola", position: "Organization Secretary", linkedinId: "deepika-pantola" },
         { name: "Dr. Anuj Bharti", position: "Organization Secretary", linkedinId: "anuj-bharti" },
