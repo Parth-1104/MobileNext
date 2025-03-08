@@ -3,17 +3,40 @@ import Button from './Button';
 import { Calendar, MapPin, Clock } from 'lucide-react';
 import { assets } from '../assets/assets_frontend/assets';
 
+// Add a style tag for the marquee animation
+const MarqueeStyle = () => (
+  <style jsx>{`
+    @keyframes marquee-rtl {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    
+    .marquee-animation {
+      animation: marquee-rtl 25s linear infinite;
+    }
+  `}</style>
+);
 
 const Herowithimage: React.FC = () => {
+    const handleClick = () => {
+      window.open('https://forms.office.com/Pages/ResponsePage.aspx?id=9NpbLPKP2Uu9VHxQqyGVkHbQOaNtO65Kl91UWmgs6LhURUMyTlZPTEpTMEZLQjlEMkNDUTBZWkJSVi4u&origin=QRCode', '_blank');
+    };
+  
   return (
-    <div className="min-h-screen min-w-screen flex items-center justify-center pt-16 px-6 relative overflow-hidden bg-gradient-to-br from-white to-gray-100 text-gray-900">
+    <>
+    <MarqueeStyle />
+    <div className="min-h-screen min-w-screen flex flex-col items-center justify-center relative overflow-hidden bg-gradient-to-br from-white to-gray-100 text-gray-900">
       {/* Background gradient circles */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-1/3 -left-1/3 w-[600px] h-[600px] bg-gradient-to-r from-blue-300 to-gray-200 rounded-full blur-3xl animate-bounce"></div>
         <div className="absolute -bottom-1/3 -right-1/3 w-[600px] h-[600px] bg-gradient-to-l from-gray-300 to-blue-400 rounded-full blur-3xl animate-bounce delay-1000"></div>
       </div>
 
-      <div className="max-w-6xl w-full flex flex-col md:flex-row items-center justify-between gap-12 relative z-10 pt-[75px]">
+      <div className="max-w-6xl w-full mt-[52px] py-4 flex flex-col md:flex-row items-center justify-between gap-12 relative z-10 pt-[75px] px-6">
         {/* Left side text content */}
         <div className="text-left md:w-1/2">
           <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 drop-shadow-xl mb-6 animate-pulse">
@@ -34,13 +57,15 @@ const Herowithimage: React.FC = () => {
             </div>
           </div>
           <p className="text-xl text-gray-700 mb-8 max-w-xl drop-shadow-lg">
-            Join the world's leading mobile developers and innovators for three days
-            of learning, networking, and inspiration.
+            Join the world's leading mobile developers and innovators for  learning, networking, and inspiration.
           </p>
           <div className='flex items-center align-middle'>
-            <button className="relative group bg-gradient-to-r from-blue-500 to-blue-300 text-white font-bold py-4 px-10 rounded-xl overflow-hidden transition-all duration-300 hover:scale-110 shadow-xl">
-              <span className="relative z-10">Register Now</span>
-            </button>
+          <button 
+      onClick={handleClick}
+      className="relative group bg-gradient-to-r from-blue-500 to-blue-300 text-white font-bold py-4 px-10 rounded-xl overflow-hidden transition-all duration-300 hover:scale-110 shadow-xl"
+    >
+      <span className="relative z-10">Register Now</span>
+    </button>
             <div className='ml-6 mt-3'>
               <Button />
             </div>
@@ -75,6 +100,29 @@ const Herowithimage: React.FC = () => {
         </div>
       </div>
     </div>
+      
+    {/* Animated Marquee below hero section - Left to Right Movement */}
+    <div className="w-full bg-[#336699] text-white py-3  overflow-hidden shadow-lg ">
+      <div className="relative overflow-hidden">
+        <div className="marquee-animation inline-block font-semibold text-lg whitespace-nowrap">
+          <span className="flex items-center">
+            <span className="inline-block animate-pulse text-yellow-300 mr-2">🔔</span> 
+            REGISTRATION DEADLINE: 15 MAR 2025 
+            <span className="inline-block animate-pulse text-yellow-300 ml-2">🔔</span> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span className="inline-block animate-pulse text-yellow-300 mr-2">🔔</span> 
+            REGISTRATION DEADLINE: 15 MAR 2025 
+            <span className="inline-block animate-pulse text-yellow-300 ml-2">🔔</span> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span className="inline-block animate-pulse text-yellow-300 mr-2">🔔</span> 
+            REGISTRATION DEADLINE: 15 MAR 2025 
+            <span className="inline-block animate-pulse text-yellow-300 ml-2">🔔</span> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+        </div>
+      </div>
+    </div>
+    </>
   );
 };
 
