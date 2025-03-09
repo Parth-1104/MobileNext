@@ -71,7 +71,7 @@ const About: React.FC = () => {
               className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-sky-600 to-indigo-600 mb-6"
               variants={itemVariants}
             >
-              A Decade of Mobile Innovation Excellence
+             About Mobile Next 
             </motion.h2>
             <motion.div 
               className="space-y-6 text-slate-700"

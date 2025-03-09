@@ -2,6 +2,8 @@ import React from 'react';
 import Button from './Button';
 import { Calendar, MapPin, Clock } from 'lucide-react';
 import { assets } from '../assets/assets_frontend/assets';
+import Button2 from './button2';
+
 
 // Add a style tag for the marquee animation
 const MarqueeStyle = () => (
@@ -25,6 +27,15 @@ const Herowithimage: React.FC = () => {
     const handleClick = () => {
       window.open('https://forms.office.com/Pages/ResponsePage.aspx?id=9NpbLPKP2Uu9VHxQqyGVkHbQOaNtO65Kl91UWmgs6LhURUMyTlZPTEpTMEZLQjlEMkNDUTBZWkJSVi4u', '_blank');
     };
+    const handleDownload = () => {
+      const pdfUrl = assets.pdf; // Adjust path if needed
+      const link = document.createElement('a');
+      link.href = pdfUrl;
+      link.download = 'brochure.pdf'; // Suggested download filename
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+  }
   
   return (
     <>
@@ -67,9 +78,16 @@ const Herowithimage: React.FC = () => {
 >
   <span className="relative z-10">Register Now</span>
 </button>
-            <div className='ml-6 mt-3'>
-              <Button />
-            </div>
+<button 
+  onClick={handleDownload}
+  className="relative ml-5 group bg-gradient-to-r from-blue-500 to-blue-300 text-white font-bold py-4 px-10 rounded-xl overflow-hidden transition-all duration-300 hover:scale-110 shadow-xl 
+  md:py-4 md:px-10 md:text-lg text-sm px-6 py-3"
+>
+  <span className="relative z-10">Brochure</span>
+</button>
+            {/* <div className='ml-6 mt-3'>
+              <Button2 />
+            </div> */}
           </div>
         </div>
 

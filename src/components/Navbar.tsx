@@ -59,7 +59,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
                 Speakers
               </HashLink>
               <Link to="/projects" className="relative text-black/90 hover:text-black transition-colors duration-200 py-2 group">
-                Projects
+                Apps
               </Link>
               <Link to="/team" className="relative text-black/90 hover:text-black transition-colors duration-200 py-2 group">
                 Team

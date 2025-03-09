@@ -38,7 +38,7 @@ const Projects: React.FC = () => {
         
         <div className="text-center mb-24">
           <span className="block mb-3 text-blue-400 font-medium tracking-wider">SHOWCASING INNOVATION</span>
-          <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 mb-8 animate-shimmer">Featured Projects</h2>
+          <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-sky-600 to-indigo-600 mb-8 animate-shimmer">Featured Apps</h2>
           <p className="from-neutral-900 max-w-2xl mx-auto text-lg">Innovative mobile solutions showcased at the conference, designed with cutting-edge technology</p>
         </div>
 
