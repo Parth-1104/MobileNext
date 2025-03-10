@@ -6,17 +6,42 @@ import { assets } from '../assets/assets_frontend/assets';
 const speakers = [
   {
     name: 'Sunil Bhatnagar',
-    role: ' CXO-Lithium Project',
+    role: 'CXO-Lithium Project',
     image: assets.photo1,
     topic: 'Building Beautiful UIs with Flutter',
+    linkedinId: "",
   },
   {
     name: 'Mukesh Bansal',
-    role: 'Mobile Security Expert',
+    role: 'Head Presales & Group CTO at TelioLabs',
     image: assets.photo2,
     topic: 'Security Best Practices in Mobile Apps',
+    linkedinId: "",
+  },
+  {
+    name: 'Nihar Ranjan Rout',
+    role: 'CEO at Creuto',
+    image: "https://media.licdn.com/dms/image/v2/D5603AQGa_OnfkJ_S0Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1718739078931?e=1747267200&v=beta&t=u5AWXPHSZlt4mVxQG72MPEo1fzlYUbvyYpiHpUUlL-o",
+    topic: 'Security Best Practices in Mobile Apps',
+    linkedinId: "niharrout/?originalSubdomain=in",
+  },
+  {
+    name: 'Jyotsana Gupta',
+    role: 'Chief Information Officer at Bi-State Development Agency',
+    image: "https://media.licdn.com/dms/image/v2/C5603AQG40GZqpdkrgg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1650680956836?e=1747267200&v=beta&t=SXHoDz5iPqnuzcHeGWMraWFEj4iLpQLcTeq7Wnc8zSU",
+    topic: 'Security Best Practices in Mobile Apps',
+    linkedinId: "jgupta12000",
   },
 ];
+
+const navigateToLinkedIn = (linkedinId: string) => {
+  // Check if the linkedinId is a full URL or just a username
+  const url = linkedinId.startsWith('http') 
+    ? linkedinId 
+    : `https://www.linkedin.com/in/${linkedinId}/`;
+  
+  window.open(url, '_blank', 'noopener,noreferrer');
+};
 
 const Speakers: React.FC = () => {
   return (
@@ -46,6 +71,7 @@ const Speakers: React.FC = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
+              onClick={() => speaker.linkedinId && navigateToLinkedIn(speaker.linkedinId)}
             >
               {/* Speaker Image */}
               <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-blue-500 mb-4">
@@ -55,6 +81,8 @@ const Speakers: React.FC = () => {
                   className="w-full h-full object-cover"
                   initial={{ scale: 1 }}
                   whileHover={{ scale: 1.05 }}
+                  onClick={() => speaker.linkedinId && navigateToLinkedIn(speaker.linkedinId)}
+                  style={{ cursor: speaker.linkedinId ? 'pointer' : 'default' }}
                 />
               </div>
 

@@ -5,6 +5,7 @@ import Home from './Home';
 import ProjectPage from './projectpage';
 import Footer from './components/Footer';
 import TeamPage from './components/Team';
+import ProjectsComingSoon from './components/project2';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ function App() {
         <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<ProjectPage />} />
+          <Route path="/project2" element={<ProjectsComingSoon />} />
           <Route path="/team" element={<TeamPage />} />
 
         </Routes>
