@@ -91,11 +91,11 @@ const Speakers: React.FC = () => {
               <p className="text-sky-600 font-medium mb-3">{speaker.role}</p>
 
               {/* Topic */}
-              {/* <p className="text-slate-500 text-sm font-medium">Speaking on:</p>
+               {/* <p className="text-slate-500 text-sm font-medium">Location:</p>
               <p className="text-slate-700 group-hover:text-blue-700 transition-colors duration-300 flex items-center gap-2">
                 {speaker.topic}
                 <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </p> */}
+              </p>  */}
             </motion.div>
           ))}
         </div>

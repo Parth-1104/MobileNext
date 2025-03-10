@@ -6,6 +6,7 @@ import logo2 from './mobilon.jpg'
 import logo3 from './mobilon2.png'
 import logo4 from './MOBILON.png'
 import logo5 from './new.png'
+import foot from './foot.png'
 
 
 export const assets = {
@@ -16,7 +17,8 @@ export const assets = {
     logo2,
     logo3,
     logo4,
-    logo5
+    logo5,
+    foot
 
 }
 

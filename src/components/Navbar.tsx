@@ -87,7 +87,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
                 <img 
                   src={assets.logo5}  
                   alt="Logo" 
-                  className="h-[16vh] md:h-[11vh] lg:h-[14vh] mt-5 ml-5 mr-5 w-auto"
+                  className="h-[24vh] md:h-[13vh] lg:h-[26vh] mt-9 ml-5 mr-5 w-auto"
                 />
               </a>
               

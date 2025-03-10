@@ -51,7 +51,7 @@ const Herowithimage: React.FC = () => {
         {/* Left side text content */}
         <div className="text-left md:w-1/2">
           <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 drop-shadow-xl mb-6 animate-pulse">
-            Mobile Dev Conference 2025
+            Mobile Next Conference 2025
           </h1>
           <div className="flex items-center mb-8 bg-white/80 backdrop-blur-sm p-4 rounded-lg shadow-lg border-l-4 border-blue-500">
             

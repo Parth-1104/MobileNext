@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, Users, Globe, Lightbulb } from 'lucide-react';
+import { assets } from '../assets/assets_frontend/assets';
 
 const About: React.FC = () => {
   const stats = [
@@ -78,12 +79,9 @@ const About: React.FC = () => {
               variants={containerVariants}
             >
               <motion.p variants={itemVariants}>
-              Mobile Next is an international conference dedicated
-to the latest advancements and innovations in
-mobile technology. Organized by Bennett University
-and Mobilon, this one-day event brings together
+              Mobilon, Mobile Technologies club, Bennett University presents Mobile Next, an International Conference dedicated to the latest advancements and innovations in Mobile technologies. This one-day event brings together
 industry experts, developers, and researchers for
-insightful discussions and interactive sessions.
+insightful discussions and interactive sessions. 
               </motion.p>
               <motion.p variants={itemVariants}>
               With a focus on emerging frameworks, AI integration,
@@ -174,6 +172,13 @@ understanding of this dynamic industry.
           </motion.div>
         </div>
       </motion.div>
+      <div>
+  <img 
+    className='w-full mt-9 h-auto rounded-lg shadow-md' 
+    src={assets.foot}
+    alt="Description of your image" 
+  />
+</div>
     </section>
   );
 };
