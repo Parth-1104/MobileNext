@@ -75,10 +75,10 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
                 Team
                 <span className="absolute inset-x-0 top-7 h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
               </Link>
-              <HashLink to="/#timeline" className="relative text-black/90 hover:text-black font-medium text-sm lg:text-base tracking-wide transition-colors duration-200 py-1 mb-1  group whitespace-nowrap">
+              {/* <HashLink to="/#timeline" className="relative text-black/90 hover:text-black font-medium text-sm lg:text-base tracking-wide transition-colors duration-200 py-1 mb-1  group whitespace-nowrap">
                 Timeline
                 <span className="absolute inset-x-0 top-7 h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
-              </HashLink>
+              </HashLink> */}
             </div>
 
             {/* Right Logo - With responsive sizing and safe space from navigation */}
@@ -149,13 +149,13 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
               >
                 Team
               </Link>
-              <HashLink 
+              {/* <HashLink 
                 to="/#timeline" 
                 onClick={() => setIsMenuOpen(false)} 
                 className="block py-3 px-2 text-black/90 hover:text-black font-medium tracking-wide transition-all duration-300 hover:bg-gradient-to-r hover:from-black/5 hover:to-black/10 hover:translate-x-1 rounded"
               >
                 Timeline
-              </HashLink>
+              </HashLink> */}
             </div>
           </div>
         </div>

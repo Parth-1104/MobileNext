@@ -22,7 +22,7 @@ function Home() {
       
         {/* <ContactForm /> */}
         
-        <section id="timeline"> <EventTimeline/></section>
+        {/* <section id="timeline"> <EventTimeline/></section> */}
     </div>
   );
 }
