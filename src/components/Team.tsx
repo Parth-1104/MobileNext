@@ -6,6 +6,7 @@ interface TeamMember {
   position: string;
   info?: string;
   linkedinId: string;
+  photoUrl?: string; // Added photo URL property
 }
 
 interface CommitteeSection {
@@ -14,25 +15,28 @@ interface CommitteeSection {
 }
 
 const TeamPage: React.FC = () => {
-  // Leadership structure
+  // Leadership structure with added photoUrl
   const leadership: TeamMember[] = [
     { 
       name: "Mr. Vineet Jain", 
       position: "PATRON",
       info: "MD, The Times Group, Chancellor, Bennett University",
-      linkedinId: "vineet-jain" 
+      linkedinId: "vineet-jain",
+      photoUrl: "https://www.bennett.edu.in/wp-content/uploads/2025/01/Vineet-Jain.jpg" // Placeholder photo
     },
     { 
       name: "Ms. Revati Jain", 
       position: "PATRON IN CHIEF",
       info: "Pro Chancellor, Bennett University",
-      linkedinId: "revati-jain" 
+      linkedinId: "revati-jain",
+      photoUrl: "https://www.bennett.edu.in/wp-content/uploads/2024/11/Ms.-Revati-Jain.jpg" // Placeholder photo
     },
     { 
       name: "Prof. (Dr.) Abhay Bansal", 
       position: "GENERAL CHAIR",
       info: "Dean, School of Computer Science Engineering and Technology, Bennett University",
-      linkedinId: "abhay-bansal" 
+      linkedinId: "abhay-bansal",
+      photoUrl: "https://www.bennett.edu.in/wp-content/uploads/2023/05/Abhay-Bansal.jpg" // Placeholder photo
     }
   ];
 
@@ -40,11 +44,11 @@ const TeamPage: React.FC = () => {
     {
       title: "Organizing Secretaries",
       members: [
-        { name: "Dr. Deepika Pantola", position: "Organizing Secretary", linkedinId: "deepika-pantola" },
-        { name: "Dr. Anuj Bharti", position: "Organizing Secretary", linkedinId: "anuj-bharti" },
-        { name: "Dr. Madhuri Gupta", position: "Organizing Secretary", linkedinId: "madhuri-gupta" },
+        { name: "Dr. Deepika Pantola", position: "Organizing Secretary", linkedinId: "dr-deepika-pantola-543b3325" },
+        { name: "Dr. Anuj Bharti", position: "Organizing Secretary", linkedinId: "dr-anuj-kumar-bharti-a0309367" },
+        { name: "Dr. Madhuri Gupta", position: "Organizing Secretary", linkedinId: "dr-madhuri-gupta-606b8572" },
         { name: "Dr. Deepika Vatsa", position: "Organizing Secretary", linkedinId: "deepika-vatsa" },
-        { name: "Dr. Mohd. Abuzar Sayeed", position: "Organizing Secretary", linkedinId: "abuzar-sayeed" },
+        { name: "Dr. Mohd. Abuzar Sayeed", position: "Organizing Secretary", linkedinId: "mohdabuzarsayeed" },
       ],
     },
     {
@@ -64,17 +68,20 @@ const TeamPage: React.FC = () => {
       title: "Local Organizing Committee",
       members: [
         { name: "Ms. Ankita Sharma", position: "Organizing Member", linkedinId: "ankita-sharma" },
-        { name: "Ms. Priyanka Chauhan", position: "Organizing Member", linkedinId: "priyanka-chauhan" },
+        { name: "Ms. Priyanka Chauhan", position: "Organizing Member", linkedinId: "priyanka-chauhan-928844230" },
         { name: "Mr. Kundan", position: "Organizing Member", linkedinId: "kundan" },
       ],
     },
     {
       title: "Student Organizing Committee",
       members: [
-        { name: "Rakshit Kapoor", position: "Student Coordinator", linkedinId: "rakshit-kapoor" },
-        { name: "Arushi Shah", position: "Student Coordinator", linkedinId: "arushi-shah" },
-        { name: "Siya Kakkar", position: "Student Coordinator", linkedinId: "siya-kakkar" },
-        { name: "Parth Pankaj Singh", position: "Student Coordinator", linkedinId: "parth-singh" },
+        { name: "Rakshit Kapoor", position: "Student Coordinator", linkedinId: "rakshit-kapoor-353312259" },
+        { name: "Arushi Shah", position: "Student Coordinator", linkedinId: "arushi-shah-878445271" },
+        { name: "Siya Kakkar", position: "Student Coordinator", linkedinId: "Siya Kakkar - Head Club Relations - SPARK, E-Cell | LinkedIn" },
+        { name: "Parth Pankaj Singh", position: "Student Coordinator", linkedinId: "parth-singh427" },
+        { name: "Khushi Saroha", position: "Student Coordinator", linkedinId: "khushi-saroha-709659301" },
+        { name: "Sankalp Tiwari", position: "Student Coordinator", linkedinId: "sankalp-tiwari-79967321a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+        { name: "Peehu Mishra", position: "Student Coordinator", linkedinId: "peehu-mishra-a5bb91293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " },
       ],
     },
   ];
@@ -111,6 +118,16 @@ const TeamPage: React.FC = () => {
     }
   };
 
+  // Function to navigate to LinkedIn profile
+  const navigateToLinkedIn = (linkedinId: string) => {
+    // Check if the linkedinId is a full URL or just a username
+    const url = linkedinId.startsWith('http') 
+      ? linkedinId 
+      : `https://www.linkedin.com/in/${linkedinId}/`;
+    
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section
       id="team"
@@ -129,7 +146,7 @@ const TeamPage: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <span className="relative inline-block">
+        <span className=" mt-9 relative inline-block">
           Our Team
           <motion.div 
             className="absolute bottom-0 left-0 h-1 bg-blue-500 rounded-full"
@@ -162,13 +179,13 @@ const TeamPage: React.FC = () => {
           ></motion.div>
         </motion.h2>
 
-        {/* Leadership Cards */}
-        <div className="grid md:grid-row-3 gap-6">
+        {/* Leadership Cards with Photos */}
+        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
           {leadership.map((leader, index) => (
             <motion.div
               key={index}
-              className="bg-white bg-opacity-90 backdrop-filter backdrop-blur-sm shadow-md rounded-lg p-6 flex flex-col justify-between"
-              style={{ minHeight: '220px' }}
+              className="bg-white bg-opacity-90 backdrop-filter backdrop-blur-sm shadow-md rounded-lg p-6 flex flex-col justify-between cursor-pointer"
+              style={{ minHeight: '280px' }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -179,25 +196,43 @@ const TeamPage: React.FC = () => {
               }}
               onHoverStart={() => setHoveredLeadership(index)}
               onHoverEnd={() => setHoveredLeadership(null)}
+              
             >
-              <div>
-                <div className="mb-2">
-                  <span className="text-sm font-semibold bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
-                    {leader.position}
-                  </span>
-                </div>
-                <motion.h3 
-                  className="text-xl font-medium mb-1 text-gray-800 leading-tight" 
-                  whileHover={{ color: "#2563EB" }}
+              <div className="flex flex-col items-center mb-4">
+                {/* Photo element with animation */}
+                <motion.div
+                  className="mb-4 overflow-hidden rounded-full border-4 border-blue-100"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
                 >
-                  {leader.name}
-                </motion.h3>
-                {leader.info && (
-                  <p className="text-gray-600 text-sm mb-4">{leader.info}</p>
-                )}
+                  <motion.img 
+                    src={leader.photoUrl}
+                    alt={`Photo of ${leader.name}`}
+                    className="w-32 h-32 object-cover"
+                    initial={{ scale: 1 }}
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.5 }}
+                  />
+                </motion.div>
+                <div className="text-center">
+                  <div className="mb-2">
+                    <span className="text-sm font-semibold bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
+                      {leader.position}
+                    </span>
+                  </div>
+                  <motion.h3 
+                    className="text-xl font-medium mb-1 text-gray-800 leading-tight" 
+                    whileHover={{ color: "#2563EB" }}
+                  >
+                    {leader.name}
+                  </motion.h3>
+                  {leader.info && (
+                    <p className="text-gray-600 text-sm mb-4">{leader.info}</p>
+                  )}
+                </div>
               </div>
-              <div className="flex items-center mt-auto">
-                <motion.svg
+              <div className="flex items-center justify-center mt-auto">
+                {/* <motion.svg
                   className="w-5 h-5 mr-2 text-blue-600 flex-shrink-0"
                   fill="currentColor"
                   viewBox="0 0 24 24"
@@ -208,16 +243,17 @@ const TeamPage: React.FC = () => {
                   }
                 >
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                </motion.svg>
-                <motion.a
+                </motion.svg> */}
+                {/* <motion.a
                   href={`https://linkedin.com/in/${leader.linkedinId}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-800 break-words text-sm hover:underline"
                   style={{ wordBreak: "break-all" }}
+                  onClick={(e) => e.stopPropagation()} // Prevent triggering the card's onClick
                 >
                   {leader.linkedinId}
-                </motion.a>
+                </motion.a> */}
               </div>
             </motion.div>
           ))}
@@ -295,7 +331,7 @@ const TeamPage: React.FC = () => {
             {committee.members.map((member, memberIndex) => (
               <motion.div
                 key={memberIndex}
-                className="bg-white bg-opacity-90 backdrop-filter backdrop-blur-sm shadow-md rounded-lg p-6 flex-shrink-0 w-72 md:w-auto flex flex-col justify-between"
+                className="bg-white bg-opacity-90 backdrop-filter backdrop-blur-sm shadow-md rounded-lg p-6 flex-shrink-0 w-72 md:w-auto flex flex-col justify-between cursor-pointer"
                 style={{
                   scrollSnapAlign: 'start',
                   minWidth: '280px',
@@ -311,6 +347,7 @@ const TeamPage: React.FC = () => {
                 }}
                 onHoverStart={() => setHoveredCard({section: index, card: memberIndex})}
                 onHoverEnd={() => setHoveredCard(null)}
+                onClick={() => navigateToLinkedIn(member.linkedinId)}
               >
                 <div>
                   <motion.h3 
@@ -335,11 +372,12 @@ const TeamPage: React.FC = () => {
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                   </motion.svg>
                   <motion.a
-                    href={`https://linkedin.com/in/${member.linkedinId}`}
+                    href={member.linkedinId.startsWith('http') ? member.linkedinId : `https://linkedin.com/in/${member.linkedinId}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:text-blue-800 break-words text-sm hover:underline"
                     style={{ wordBreak: "break-all" }}
+                    onClick={(e) => e.stopPropagation()} // Prevent triggering the card's onClick
                   >
                     {member.linkedinId}
                   </motion.a>

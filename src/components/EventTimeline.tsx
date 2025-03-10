@@ -10,7 +10,7 @@ const EventTimeline = () => {
     id: 0,
     time: "09:00 - 10:00",
     title: "Lamp Lighting",
-    location: "Main Entrance",
+    location: "B-Block Lounge",
     description:
       "Traditional lamp lighting ceremony to inaugurate the event with distinguished guests.",
     icon: "🪔",
@@ -19,7 +19,7 @@ const EventTimeline = () => {
     id: 1,
     time: "10:30 - 11:30",
     title: "Opening Ceremony",
-    location: "Main Hall",
+    location: "B-Block Lounge",
     description:
       "Official welcome address and introduction to the event theme and schedule.",
     icon: "🎪",
@@ -28,7 +28,7 @@ const EventTimeline = () => {
     id: 2,
     time: "12:00 - 13:30",
     title: "Facilitating of Guests",
-    location: "Auditorium",
+    location: "B-Block Lounge",
     description:
       "Special interactive session with esteemed guests and networking opportunities.",
     icon: "👥", // Swapped 🎙️ -> 👥
@@ -37,7 +37,7 @@ const EventTimeline = () => {
     id: 3,
     time: "14:00 - 15:30",
     title: "Speaker Session",
-    location: "Conference Lounge",
+    location: "B-Block Lounge",
     description:
       "Keynote presentations from industry experts sharing insights and knowledge.",
     icon: "🎙️", // Swapped 👥 -> 🎙️
@@ -46,7 +46,7 @@ const EventTimeline = () => {
     id: 4,
     time: "16:00 - 17:30",
     title: "App Showcase",
-    location: "Exhibition Hall",
+    location: "002-ALH",
     description:
       "Demonstration of innovative projects and ideas developed by participants.",
     icon: "🏆",
