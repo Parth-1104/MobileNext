@@ -20,7 +20,7 @@ const ProjectsComingSoon = () => {
       
       // Calculate progress percentage (capped at 100%)
       const now = new Date().getTime();
-      const startDate = new Date('2025-03-10T00:00:00').getTime();
+      const startDate = new Date('2025-03-19T00:00:00').getTime();
       const total = launchDate.getTime() - startDate;
       const elapsed = now - startDate;
       const newProgress = Math.min(100, Math.max(0, (elapsed / total) * 100));
@@ -118,7 +118,7 @@ const ProjectsComingSoon = () => {
         </div>
         
         {/* Progress indicator */}
-        <div className="w-full max-w-lg mx-auto mb-12">
+        {/* <div className="w-full max-w-lg mx-auto mb-12">
           <div className="flex justify-between mb-2 text-sm text-gray-600">
             <span>Progress</span>
             <span>{Math.round(progress)}%</span>
@@ -129,7 +129,7 @@ const ProjectsComingSoon = () => {
               style={{ width: `${progress}%` }}
             />
           </div>
-        </div>
+        </div> */}
         
         {/* Newsletter signup with success message */}
         <div className="max-w-md mx-auto bg-white rounded-lg shadow-md p-6 mb-8 relative">

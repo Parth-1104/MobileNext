@@ -6,17 +6,17 @@ import { assets } from '../assets/assets_frontend/assets';
 const speakers = [
   {
     name: 'Sunil Bhatnagar',
-    role: 'CXO-Lithium Project',
-    image: assets.photo1,
+    role: 'CXO Lithium Project IPLT. Electric Trucks. ZET',
+    image: "https://media.licdn.com/dms/image/v2/D5603AQFmuDp6FMzPmw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1714995676310?e=1747267200&v=beta&t=CMJLRtiB6DyJLDqE5Qwzi2ZYTN5Le6v4dmDStyY2Us4",
     topic: 'Building Beautiful UIs with Flutter',
-    linkedinId: "",
+    linkedinId: "sunil-bhatnagar-47251423",
   },
   {
     name: 'Mukesh Bansal',
-    role: 'Head Presales & Group CTO at TelioLabs',
+    role: 'Co Founder & CTO at TelioEV',
     image: assets.photo2,
     topic: 'Security Best Practices in Mobile Apps',
-    linkedinId: "",
+    linkedinId: "mukeshtalks",
   },
   {
     name: 'Nihar Ranjan Rout',
