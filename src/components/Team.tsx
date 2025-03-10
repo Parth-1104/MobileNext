@@ -77,11 +77,11 @@ const TeamPage: React.FC = () => {
       members: [
         { name: "Rakshit Kapoor", position: "Student Coordinator", linkedinId: "rakshit-kapoor-353312259" },
         { name: "Arushi Shah", position: "Student Coordinator", linkedinId: "arushi-shah-878445271" },
-        { name: "Siya Kakkar", position: "Student Coordinator", linkedinId: "Siya Kakkar - Head Club Relations - SPARK, E-Cell | LinkedIn" },
+        { name: "Siya Kakkar", position: "Student Coordinator", linkedinId: "siya-kakkar" },
         { name: "Parth Pankaj Singh", position: "Student Coordinator", linkedinId: "parth-singh427" },
         { name: "Khushi Saroha", position: "Student Coordinator", linkedinId: "khushi-saroha-709659301" },
         { name: "Sankalp Tiwari", position: "Student Coordinator", linkedinId: "sankalp-tiwari-79967321a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-        { name: "Peehu Mishra", position: "Student Coordinator", linkedinId: "peehu-mishra-a5bb91293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " },
+        { name: "Peehu Mishra", position: "Student Coordinator", linkedinId: "peehu-mishra" },
       ],
     },
   ];
