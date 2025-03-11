@@ -157,43 +157,51 @@ const TeamPage: React.FC = () => {
       members: [
         { 
           name: "Rakshit Kapoor", 
-          position: "Student Coordinator", 
+          position: "Chairperson,Mobilon", 
           linkedinId: "rakshit-kapoor-353312259",
           photoUrl: "https://media.licdn.com/dms/image/v2/D5603AQGQw0GHcdZGJw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1723582074577?e=1747267200&v=beta&t=q-t4Q7VK6VI3HB-3rn9b2b_is5KhYsgoyB833BJwCUQ" 
         },
         { 
           name: "Arushi Shah", 
-          position: "Student Coordinator", 
+          position: "Vice ChairPerson,Mobilon", 
           linkedinId: "arushi-shah-878445271",
           photoUrl: "https://media.licdn.com/dms/image/v2/D5603AQF5CrdAA2QpVA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1732470124217?e=1747267200&v=beta&t=vYPqsFRPMw7p0PcKtm2I709acoztYxpHI0zLVRxiUnU" 
         },
         { 
           name: "Siya Kakkar", 
-          position: "Student Coordinator", 
+          position: "General Secretary,Mobilon", 
           linkedinId: "siya-kakkar",
           photoUrl: "https://media.licdn.com/dms/image/v2/D5603AQFW7YWuEizjxA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1727268674982?e=1747267200&v=beta&t=0TzLTigeQ8AcJvBD6FeUAM63mTEZ1eXM-OaGlOKJytk" 
         },
         { 
+          name: "Vasu Bhatia", 
+          position: "Management Head,Mobilon", 
+          linkedinId: "vasu-bhatia",
+          photoUrl: "https://media.licdn.com/dms/image/v2/D5603AQGOMMHSulT_Rw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1688456011347?e=1747267200&v=beta&t=r6lT90xdNM7Q7ATzQGszc7oXnrJZU4b1ANKv3i-sHdo" 
+        },
+        { 
           name: "Parth Pankaj Singh", 
-          position: "Student Coordinator", 
+          position: "Tech Co Head,Mobilon", 
           linkedinId: "parth-singh427",
           photoUrl: "https://media.licdn.com/dms/image/v2/D5603AQFmLU7ln22F-g/profile-displayphoto-shrink_400_400/B56ZQ2.McUHIAg-/0/1736089063427?e=1747267200&v=beta&t=RCeS50lKtQOjK3LHt-QbhRnm6oXm3bgpxn2qTnPuVw0" 
         },
-        { 
-          name: "Khushi Saroha", 
-          position: "Student Coordinator", 
-          linkedinId: "khushi-saroha-709659301",
-          photoUrl: "https://media.licdn.com/dms/image/v2/D4E03AQFKx8d76I66fw/profile-displayphoto-shrink_400_400/B4EZObyGBiHwAk-/0/1733485421175?e=1747267200&v=beta&t=tCH6kcjaGH0CH-Sqvo-qm6Oqjo6ecxKayxwzMDF5Yto" 
-        },
+        
+        
         { 
           name: "Sankalp Tiwari", 
-          position: "Student Coordinator", 
+          position: "Events Head,Mobilon", 
           linkedinId: "sankalp-tiwari-79967321a",
           photoUrl: "https://media.licdn.com/dms/image/v2/D5603AQE3CDw1SQpWqQ/profile-displayphoto-shrink_400_400/B56ZR.vYdMHsAk-/0/1737293138799?e=1747267200&v=beta&t=sdRJu_oPJ7Tz0hev0c9K6PNry-cmxT7Qvu2lX-uvfnY" 
         },
         { 
+          name: "Khushi Saroha", 
+          position: "Management Co Head,Mobilon", 
+          linkedinId: "khushi-saroha-709659301",
+          photoUrl: "https://media.licdn.com/dms/image/v2/D4E03AQFKx8d76I66fw/profile-displayphoto-shrink_400_400/B4EZObyGBiHwAk-/0/1733485421175?e=1747267200&v=beta&t=tCH6kcjaGH0CH-Sqvo-qm6Oqjo6ecxKayxwzMDF5Yto" 
+        },
+        { 
           name: "Peehu Mishra", 
-          position: "Student Coordinator", 
+          position: "Tech Head,Mobilon", 
           linkedinId: "peehu-mishra",
           photoUrl: "https://media.licdn.com/dms/image/v2/D5603AQFoFWgFTBzncg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1708777290099?e=1747267200&v=beta&t=WOfXbR7qdXPmY3l5Pk9MeZgBdPFdiWR7KA5ATp7hCiI" 
         },

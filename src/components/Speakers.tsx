@@ -45,7 +45,7 @@ const navigateToLinkedIn = (linkedinId: string) => {
 
 const Speakers: React.FC = () => {
   return (
-    <section className="py-16 bg-gradient-to-b from-indigo-50 via-sky-50 to-blue-50">
+    <section className="py-1 bg-gradient-to-b from-indigo-50 via-sky-50 to-blue-50">
       <div className="container mx-auto px-4">
         {/* Title Section */}
         <motion.div 

@@ -174,7 +174,7 @@ const ProjectsComingSoon = () => {
         
         {/* Contact information */}
         <div className="text-center text-gray-600 text-sm">
-          <p>Questions? Contact us at <span className="text-blue-600">info@yourcompany.com</span></p>
+          <p>Questions? Contact us at <span className="text-blue-600">info@bennett.edu.in</span></p>
         </div>
       </div>
       

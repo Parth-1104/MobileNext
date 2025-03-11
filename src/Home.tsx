@@ -6,6 +6,7 @@ import Speakers from './components/Speakers';
 import ContactForm from './components/ContactForm';
 import EventTimeline from './components/EventTimeline';
 import TeamPage from './components/Team';
+import MarqueeCards from './components/marquee';
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
         </section>
       
         <section id="speakers">  <Speakers /></section>
+        <MarqueeCards/>
         
       
         {/* <ContactForm /> */}

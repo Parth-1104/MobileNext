@@ -174,7 +174,7 @@ understanding of this dynamic industry.
       </motion.div>
       <div>
   <img 
-    className='w-full mt-9 h-auto rounded-lg shadow-md' 
+    className='w-full  mt-[79px] h-[10vh] md:h-[15vh] rounded-lg shadow-md  ' 
     src={assets.foot}
     alt="Description of your image" 
   />
