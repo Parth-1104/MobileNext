@@ -188,7 +188,7 @@ const TeamPage: React.FC = () => {
         { 
           name: "Sankalp Tiwari", 
           position: "Student Coordinator", 
-          linkedinId: "sankalp-tiwari-79967321a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          linkedinId: "sankalp-tiwari-79967321a",
           photoUrl: "https://media.licdn.com/dms/image/v2/D5603AQE3CDw1SQpWqQ/profile-displayphoto-shrink_400_400/B56ZR.vYdMHsAk-/0/1737293138799?e=1747267200&v=beta&t=sdRJu_oPJ7Tz0hev0c9K6PNry-cmxT7Qvu2lX-uvfnY" 
         },
         { 
