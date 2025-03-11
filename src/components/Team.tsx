@@ -54,14 +54,14 @@ const TeamPage: React.FC = () => {
     {
       title: "Technical Program Committee",
       members: [
-        { name: "Dr. Manish Raj", position: "Technical Chair", linkedinId: "manish-raj" },
-        { name: "Dr. Shakti Sharma", position: "Technical Chair", linkedinId: "shakti-sharma" },
-        { name: "Dr. Mukund Pratap Singh", position: "Technical Chair", linkedinId: "mukund-singh" },
-        { name: "Dr. Naween Kumar", position: "Technical Chair", linkedinId: "naween-kumar" },
-        { name: "Dr. Anu Rani", position: "Technical Chair", linkedinId: "anu-rani" },
-        { name: "Dr. Garima Jaiswal", position: "Technical Chair", linkedinId: "garima-jaiswal" },
-        { name: "Dr. Gitika Sharma", position: "Technical Chair", linkedinId: "gitika-sharma" },
-        { name: "Dr. Riti Kushwaha", position: "Technical Chair", linkedinId: "riti-kushwaha" },
+        { name: "Dr. Manish Raj", position: "Technical Chair", linkedinId: "manish-raj-64708032" },
+        { name: "Dr. Shakti Sharma", position: "Technical Chair", linkedinId: "shakti11" },
+        { name: "Dr. Mukund Pratap Singh", position: "Technical Chair", linkedinId: "mukund-pratap-singh-1b46159b" },
+        { name: "Dr. Naween Kumar", position: "Technical Chair", linkedinId: "" },
+        { name: "Dr. Anu Rani", position: "Technical Chair", linkedinId: "dr-anu-rani-72617a196" },
+        { name: "Dr. Garima Jaiswal", position: "Technical Chair", linkedinId: "drgarimajaiswal01" },
+        { name: "Dr. Gitika Sharma", position: "Technical Chair", linkedinId: "dr-gitika-sharma-051b288a" },
+        { name: "Dr. Riti Kushwaha", position: "Technical Chair", linkedinId: "dr-riti-kushwaha-2800375b" },
       ],
     },
     {
