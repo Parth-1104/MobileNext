@@ -13,6 +13,7 @@ import f03 from'./f03.png'
 import f04 from'./f04.png'
 import f05 from'./f05.jpg'
 import f06 from'./f06.png'
+import vdo from './video.mp4'
 
 
 
@@ -27,7 +28,7 @@ export const assets = {
     logo3,
     logo4,
     logo5,
-    foot,f01,f02,f03,f04,f05,f06
+    foot,f01,f02,f03,f04,f05,f06,vdo
 
 }
 
