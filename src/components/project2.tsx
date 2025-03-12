@@ -62,7 +62,7 @@ const ProjectsComingSoon = () => {
   
   return (
     <section id='project2'>
-    <div className="flex flex-col mt-[109px] items-center justify-center min-h-screen bg-gray-50 p-4">
+    <div className="flex flex-col mt-[109px] mr-2 items-center justify-center min-h-screen bg-gray-50 p-4">
       <div 
         className={`max-w-4xl mx-auto transition-all duration-1000 ${
           loaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
@@ -94,7 +94,7 @@ const ProjectsComingSoon = () => {
 
   <button 
   onClick={handleClick2}
-  className="relative group bg-gradient-to-r mt-3 from-blue-500 to-blue-300 text-white font-bold py-4 px-10 rounded-xl overflow-hidden transition-all duration-300 hover:scale-110 shadow-xl 
+  className="relative group bg-gradient-to-r mt-3  from-blue-500 to-blue-300 text-white font-bold  rounded-xl overflow-hidden transition-all duration-300 hover:scale-110 shadow-xl 
   md:py-4 md:px-10 md:text-lg text-sm px-6 py-3"
 >
   <span className="relative z-10">Register Now</span>
