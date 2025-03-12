@@ -54,6 +54,9 @@ const ProjectsComingSoon = () => {
       }, 5000);
     }
   };
+  const handleClick = () => {
+    window.open('https://forms.office.com/Pages/ResponsePage.aspx?id=9NpbLPKP2Uu9VHxQqyGVkHiDwdnGBnRJkHESRsFQ5jJUMzY0RzNBQTE2RzBZUzZXUkhHN0tYUzY4WC4u&origin=QRCode', '_blank');
+  };
   
   const { days, hours, minutes, seconds } = timeRemaining();
   
@@ -83,8 +86,21 @@ const ProjectsComingSoon = () => {
           </div>
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Innovation in Progress</h2>
           <p className="text-gray-600 mb-6">
-            Our team is currently developing groundbreaking projects that will be revealed soon. 
-            We're excited to share our work with you in the coming weeks.
+          <div>
+  <h3>
+    Got an innovative app? Showcase it to industry leaders <br />  
+    Register your app 
+  </h3>
+
+  <button 
+  onClick={handleClick}
+  className="relative group bg-gradient-to-r mt-3 from-blue-500 to-blue-300 text-white font-bold py-4 px-10 rounded-xl overflow-hidden transition-all duration-300 hover:scale-110 shadow-xl 
+  md:py-4 md:px-10 md:text-lg text-sm px-6 py-3"
+>
+  <span className="relative z-10">Register Now</span>
+</button>
+</div>
+
           </p>
           <div className="flex flex-wrap justify-center gap-3 text-sm">
             <span className="bg-blue-100 text-blue-800 rounded-full px-3 py-1">Innovation</span>

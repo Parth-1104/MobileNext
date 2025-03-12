@@ -25,7 +25,7 @@ const MarqueeStyle = () => (
 
 const Herowithimage: React.FC = () => {
     const handleClick = () => {
-      window.open('https://forms.office.com/Pages/ResponsePage.aspx?id=9NpbLPKP2Uu9VHxQqyGVkHbQOaNtO65Kl91UWmgs6LhURUMyTlZPTEpTMEZLQjlEMkNDUTBZWkJSVi4u', '_blank');
+      window.open('https://forms.office.com/Pages/ResponsePage.aspx?id=9NpbLPKP2Uu9VHxQqyGVkHiDwdnGBnRJkHESRsFQ5jJUMzY0RzNBQTE2RzBZUzZXUkhHN0tYUzY4WC4u&origin=QRCode', '_blank');
     };
     const handleDownload = () => {
       const pdfUrl = assets.pdf; // Adjust path if needed
@@ -89,6 +89,14 @@ const Herowithimage: React.FC = () => {
               <Button2 />
             </div> */}
           </div>
+          <div className='mt-3'>
+  <h3>
+    Got an innovative app? Showcase it to industry leaders <br />  
+    Register your app <a href="https://forms.gle/your-google-form-link" target="_blank" rel="noopener noreferrer" style={{ color: '#1a0dab', textDecoration: 'underline' }}>here</a>
+  </h3>
+</div>
+
+
         </div>
 
         {/* Right side phone animation */}

@@ -68,7 +68,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
                 <span className="absolute inset-x-0 top-7 h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
               </HashLink>
               <Link to="/project2" className="relative text-black/90 hover:text-black font-medium text-sm lg:text-base tracking-wide transition-colors duration-200 py-1 mb-1  group whitespace-nowrap">
-                Apps
+                App Showcase
                 <span className="absolute inset-x-0 top-7 h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
               </Link>
               <Link to="/team" className="relative text-black/90 hover:text-black font-medium text-sm lg:text-base tracking-wide transition-colors duration-200 py-1 mb-1  group whitespace-nowrap">
@@ -140,7 +140,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
                 onClick={() => setIsMenuOpen(false)} 
                 className="block py-3 px-2 text-black/90 hover:text-black font-medium tracking-wide transition-all duration-300 hover:bg-gradient-to-r hover:from-black/5 hover:to-black/10 hover:translate-x-1 rounded"
               >
-                Projects
+                App Showcase
               </Link>
               <Link 
                 to="/team" 

@@ -8,6 +8,7 @@ import EventTimeline from './components/EventTimeline';
 import TeamPage from './components/Team';
 import MarqueeCards from './components/marquee';
 
+
 function Home() {
   return (
     <div className="min-h-screen w-full  overflow-x-hidden">
@@ -20,6 +21,7 @@ function Home() {
       
         <section id="speakers">  <Speakers /></section>
         <MarqueeCards/>
+      
         
       
         {/* <ContactForm /> */}
