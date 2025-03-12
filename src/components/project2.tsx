@@ -54,7 +54,7 @@ const ProjectsComingSoon = () => {
       }, 5000);
     }
   };
-  const handleClick = () => {
+  const handleClick2 = () => {
     window.open('https://forms.office.com/Pages/ResponsePage.aspx?id=9NpbLPKP2Uu9VHxQqyGVkHiDwdnGBnRJkHESRsFQ5jJUMzY0RzNBQTE2RzBZUzZXUkhHN0tYUzY4WC4u&origin=QRCode', '_blank');
   };
   
@@ -93,7 +93,7 @@ const ProjectsComingSoon = () => {
   </h3>
 
   <button 
-  onClick={handleClick}
+  onClick={handleClick2}
   className="relative group bg-gradient-to-r mt-3 from-blue-500 to-blue-300 text-white font-bold py-4 px-10 rounded-xl overflow-hidden transition-all duration-300 hover:scale-110 shadow-xl 
   md:py-4 md:px-10 md:text-lg text-sm px-6 py-3"
 >
