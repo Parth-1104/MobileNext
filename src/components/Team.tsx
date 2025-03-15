@@ -100,8 +100,8 @@ const TeamPage: React.FC = () => {
         { 
           name: "Dr. Naween Kumar", 
           position: "Technical Chair", 
-          linkedinId: "",
-          photoUrl: "/api/placeholder/100/100" 
+          linkedinId: "dr-naween-kumar-639161215",
+          photoUrl: "https://media.licdn.com/dms/image/v2/C4E03AQEbT9YSvk3lHg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1631540478461?e=1747267200&v=beta&t=ZCH34ls-kyZtEikAVCI08FBsqelRLbkPrh-_HqNDOlM" 
         },
         { 
           name: "Dr. Anu Rani", 
@@ -163,9 +163,9 @@ const TeamPage: React.FC = () => {
         },
         { 
           name: "Arushi Shah", 
-          position: "Vice ChairPerson,Mobilon", 
+          position: "Vice Chairperson,Mobilon", 
           linkedinId: "arushi-shah-878445271",
-          photoUrl: "https://media.licdn.com/dms/image/v2/D5603AQF5CrdAA2QpVA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1732470124217?e=1747267200&v=beta&t=vYPqsFRPMw7p0PcKtm2I709acoztYxpHI0zLVRxiUnU" 
+          photoUrl: "https://media.licdn.com/dms/image/v2/D5603AQE_4Duy8AJXqA/profile-displayphoto-shrink_400_400/B56ZWWU7NBGQAg-/0/1741983826249?e=1747267200&v=beta&t=mautgLsTJnH1ASMNfO7ti1_F5EYnGnw6eS56LJEEVzo" 
         },
         { 
           name: "Siya Kakkar", 
@@ -179,12 +179,7 @@ const TeamPage: React.FC = () => {
           linkedinId: "vasu-bhatia",
           photoUrl: "https://media.licdn.com/dms/image/v2/D5603AQGOMMHSulT_Rw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1688456011347?e=1747267200&v=beta&t=r6lT90xdNM7Q7ATzQGszc7oXnrJZU4b1ANKv3i-sHdo" 
         },
-        { 
-          name: "Parth Pankaj Singh", 
-          position: "Tech Co Head,Mobilon", 
-          linkedinId: "parth-singh427",
-          photoUrl: "https://media.licdn.com/dms/image/v2/D5603AQFmLU7ln22F-g/profile-displayphoto-shrink_400_400/B56ZQ2.McUHIAg-/0/1736089063427?e=1747267200&v=beta&t=RCeS50lKtQOjK3LHt-QbhRnm6oXm3bgpxn2qTnPuVw0" 
-        },
+        
         
         
         { 
@@ -194,10 +189,16 @@ const TeamPage: React.FC = () => {
           photoUrl: "https://media.licdn.com/dms/image/v2/D5603AQE3CDw1SQpWqQ/profile-displayphoto-shrink_400_400/B56ZR.vYdMHsAk-/0/1737293138799?e=1747267200&v=beta&t=sdRJu_oPJ7Tz0hev0c9K6PNry-cmxT7Qvu2lX-uvfnY" 
         },
         { 
-          name: "Khushi Saroha", 
-          position: "Management Co Head,Mobilon", 
-          linkedinId: "khushi-saroha-709659301",
-          photoUrl: "https://media.licdn.com/dms/image/v2/D4E03AQFKx8d76I66fw/profile-displayphoto-shrink_400_400/B4EZObyGBiHwAk-/0/1733485421175?e=1747267200&v=beta&t=tCH6kcjaGH0CH-Sqvo-qm6Oqjo6ecxKayxwzMDF5Yto" 
+          name: "Raghav Verma", 
+          position: "Marketing  Head,Mobilon", 
+          linkedinId: "raghav-verma-067b89257",
+          photoUrl: "https://media.licdn.com/dms/image/v2/D4D03AQFAL8YHCQIvBA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1686303671729?e=1747267200&v=beta&t=bbKql6LlGMC4vVzEcGu4sBCtK23ebcQzeMyUlcpShd0" 
+        },
+        { 
+          name: "kota lakshmisowmya", 
+          position: "Multimedia  Head,Mobilon", 
+          linkedinId: "kota-lakshmisowmya-9743b0266",
+          photoUrl: "https://media.licdn.com/dms/image/v2/D5603AQFgAD-GN8VrWQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1712679180109?e=1747267200&v=beta&t=x3BWYLer7gX8sWCzhPGnU9ba6x6u6Qiwm-hVhYBv93M" 
         },
         { 
           name: "Peehu Mishra", 
@@ -205,6 +206,21 @@ const TeamPage: React.FC = () => {
           linkedinId: "peehu-mishra",
           photoUrl: "https://media.licdn.com/dms/image/v2/D5603AQFoFWgFTBzncg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1708777290099?e=1747267200&v=beta&t=WOfXbR7qdXPmY3l5Pk9MeZgBdPFdiWR7KA5ATp7hCiI" 
         },
+        { 
+          name: "Khushi Saroha", 
+          position: "Management Co Head,Mobilon", 
+          linkedinId: "khushi-saroha-709659301",
+          photoUrl: "https://media.licdn.com/dms/image/v2/D4E03AQFKx8d76I66fw/profile-displayphoto-shrink_400_400/B4EZObyGBiHwAk-/0/1733485421175?e=1747267200&v=beta&t=tCH6kcjaGH0CH-Sqvo-qm6Oqjo6ecxKayxwzMDF5Yto" 
+        },
+        { 
+          name: "Parth Pankaj Singh", 
+          position: "Tech Co Head,Mobilon", 
+          linkedinId: "parth-singh427",
+          photoUrl: "https://media.licdn.com/dms/image/v2/D5603AQFmLU7ln22F-g/profile-displayphoto-shrink_400_400/B56ZQ2.McUHIAg-/0/1736089063427?e=1747267200&v=beta&t=RCeS50lKtQOjK3LHt-QbhRnm6oXm3bgpxn2qTnPuVw0" 
+        },
+       
+        
+       
       ],
     },
   ];

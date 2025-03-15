@@ -69,8 +69,8 @@ const ProjectsComingSoon = () => {
         }`}
       >
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-2 text-gray-800">
-            Projects Coming Soon
+          <h1 className="text-4xl md:text-5xl  font-bold mb-2 text-gray-800">
+            Projects Coming Soon  
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             We're working on exciting new initiatives. Stay tuned for our upcoming project reveals.
