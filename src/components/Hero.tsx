@@ -176,15 +176,15 @@ const Herowithimage = () => {
           <div className="marquee-animation inline-block font-semibold text-lg whitespace-nowrap">
             <span className="flex items-center">
               <span className="inline-block animate-pulse text-yellow-300 mr-2">🔔</span> 
-              REGISTRATION DEADLINE: 15 MAR 2025 
+              REGISTRATION DEADLINE: 17 MAR 2025 
               <span className="inline-block animate-pulse text-yellow-300 ml-2">🔔</span> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span className="inline-block animate-pulse text-yellow-300 mr-2">🔔</span> 
-              REGISTRATION DEADLINE: 15 MAR 2025 
+              REGISTRATION DEADLINE: 17 MAR 2025 
               <span className="inline-block animate-pulse text-yellow-300 ml-2">🔔</span> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span className="inline-block animate-pulse text-yellow-300 mr-2">🔔</span> 
-              REGISTRATION DEADLINE: 15 MAR 2025 
+              REGISTRATION DEADLINE: 17 MAR 2025 
               <span className="inline-block animate-pulse text-yellow-300 ml-2">🔔</span> 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </span>
