@@ -49,7 +49,7 @@ const speakers = [
   {
     name: ' Amod Kumar Pandey',
     role: 'Research Analystat  DRDO, Delhi Headquarters',
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQGgJpVMDJb0RA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690995784013?e=1747872000&v=beta&t=m9f26jLp7eePmq45AHhmrTFrARk7SnY6DCw3W50wuoA",
+    image: assets.amod,
     topic: 'security aspect on cyber and 5G in Quantum Era',
     linkedinId: "a-k-pandey-57206939",
   },
